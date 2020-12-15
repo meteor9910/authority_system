@@ -17,9 +17,9 @@
 </head>
 <body>
 	<div>
-			<button class="layui-btn bt_add" data="893px, 550px" data-url="${ctx}/a/menu/addPage">新增</button>
-			<button class="layui-btn layui-btn-warm bt_update" data="893px, 550px" data-url="${ctx}/a/menu/updatePage">修改</button>
-			<button class="layui-btn layui-btn-danger bt_delete" data-url="${ctx}/a/menu/delete">删除</button>
+			<button class="layui-btn bt_add" data="893px, 550px" data-url="${ctx}/menu/toAddPage">新增</button>
+			<button class="layui-btn layui-btn-warm bt_update" data="893px, 550px" data-url="${ctx}/menu/toUpdatePage">修改</button>
+			<button class="layui-btn layui-btn-danger bt_delete" data-url="${ctx}/menu/delete">删除</button>
 	</div>
 
 	<table class="layui-hide" id="menu" lay-data="{id: 'menu'}"></table>
@@ -29,7 +29,7 @@
 
 			table.render({
 				elem : '#menu',
-				url : '${ctx}/a/menu/list',
+				url : '${ctx}/menu/list',
 				cellMinWidth : 80,
 				cols : [ [ {
 					type : 'checkbox'
@@ -112,22 +112,22 @@
 				}] ]
 			});
 
-			//搜索条件
-			var $ = layui.$, active = {
-				reload : function() {
-					table.reload($('table').attr("id"), {
-						where : {
-							menuName : $('#menuName').val()
-						}
-					});
-				}
-			};
+			// //搜索条件
+			// var $ = layui.$, active = {
+			// 	reload : function() {
+			// 		table.reload($('table').attr("id"), {
+			// 			where : {
+			// 				menuName : $('#menuName').val()
+			// 			}
+			// 		});
+			// 	}
+			// };
 			//触发搜索条件事件
-			$('.bt_search').on('click', function (e){
-				var type = $(this).data('type');
-				active[type] ? active[type].call(this) : '';
-				return false;
-			})
+			// $('.bt_search').on('click', function (e){
+			// 	var type = $(this).data('type');
+			// 	active[type] ? active[type].call(this) : '';
+			// 	return false;
+			// })
 
 		});
 	</script>

@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="body_main">
-		<form class="layui-form layui-form-pane" action="${ctx}/a/role/save">
+		<form class="layui-form layui-form-pane" action="${ctx}/role/save">
 			<div class="layui-form-item">
 				<label class="layui-form-label">角色名</label>
 				<div class="layui-input-block">

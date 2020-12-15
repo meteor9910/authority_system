@@ -3,6 +3,11 @@ package com.hopu.utils;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
 public class PageEntity {
+    private int code = 0;
+    private String msg;
+    private int count;
+    private Object data;
+
     public PageEntity(){};
 
     public PageEntity(long count, Object data){
@@ -15,8 +20,6 @@ public class PageEntity {
         this.data = page.getRecords();
     }
 
-    private int code = 0;
-
     public int getCode() {
         return code;
     }
@@ -24,12 +27,6 @@ public class PageEntity {
     public void setCode(int code) {
         this.code = code;
     }
-
-    private String msg;
-
-    private int count;
-
-    private Object data;
 
     public String getMsg() {
         return msg;

@@ -36,7 +36,7 @@
 		    <button class="layui-btn bt_add" data="893px, 550px" data-url="${ctx}/user/toAddPage"><span class='iconfont icon-add'></span>&nbsp;新增</button>
 			<button class="layui-btn layui-btn-warm bt_update" data="893px, 550px" data-url="${ctx}/user/toUpdatePage"><span class='iconfont icon-brush'></span>&nbsp;修改</button>
 			<button class="layui-btn layui-btn-danger bt_delete" data-url="${ctx}/user/delete"><span class='iconfont icon-delete'></span>&nbsp;删除</button>
-			<button class="layui-btn layui-btn-normal bt_setRole" data="893px, 550px" data-url="user/user_setRole.jsp"><span class='iconfont icon-group'></span>&nbsp;分配角色</button>
+			<button class="layui-btn layui-btn-normal bt_setRole" data="893px, 550px" data-url="${ctx}/user/toSetRole"><span class='iconfont icon-group'></span>&nbsp;分配角色</button>
 	</div>
 
 	<table class="layui-hide" id="user" lay-data="{id: 'user'}"></table>

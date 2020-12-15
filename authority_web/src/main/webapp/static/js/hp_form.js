@@ -8,6 +8,12 @@ layui.use('form', function() {
 		// if(!checkPhone()){
 		// 	return false;
 		// }
+		let action = $('form').attr("action");
+		if (action.indexOf('user')!=-1&&!checkPhone()) {
+			return false;
+
+		}
+
 
 		$.post($('form').attr("action"),data.field, function (e){
 			// var data = JSON.parse(e);

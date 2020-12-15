@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div class="body_main">
-		<form class="layui-form layui-form-pane" action="${ctx}/a/menu/update">
+		<form class="layui-form layui-form-pane" action="${ctx}/menu/update">
 			<input type="hidden" name="id" value="${menu.id}">
 			<div class="layui-form-item">
 				<label class="layui-form-label">父级菜单</label>
@@ -78,7 +78,7 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">回调方法</label>
 				<div class="layui-input-block">
-					<input type="text" name="function" autocomplete="off" value="${menu.function }"
+					<input type="text" name="function" autocomplete="off" value="${menu.functionImg }"
 						placeholder="请输入回调方法" class="layui-input">
 				</div>
 			</div>

@@ -10,18 +10,19 @@
 </head>
 <body>
 	<div class="body_main">
-		<form class="layui-form layui-form-pane" action="${ctx}/a/role/update">
+		<form class="layui-form layui-form-pane" action="${ctx}/role/update">
+			<input type="hidden" value="${role.id}" name="id">
 			<div class="layui-form-item">
 				<label class="layui-form-label">角色名</label>
 				<div class="layui-input-block">
-					<input type="text" name="role" autocomplete="off" value="root"
+					<input type="text" name="role" autocomplete="off" value="${role.role}"
 						placeholder="请输入角色名" class="layui-input">
 				</div>
 			</div>
 			<div class="layui-form-item">
 				<label class="layui-form-label">备注</label>
 				<div class="layui-input-block">
-					<input type="text" name="remark" autocomplete="off" value="备注角色"
+					<input type="text" name="remark" autocomplete="off" value="${role.remark}"
 						placeholder="请输入备注" class="layui-input">
 				</div>
 			</div>

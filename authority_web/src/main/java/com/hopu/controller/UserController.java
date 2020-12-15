@@ -3,6 +3,7 @@ package com.hopu.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.hopu.domain.Role;
 import com.hopu.domain.User;
 import com.hopu.service.IUserService;
 import com.hopu.utils.ResponseEntity;
@@ -136,6 +137,21 @@ public class UserController {
         return success();
     }
 
+
+    @RequestMapping("/toSetRole")
+    public String toSetRole(String id, Model model){
+        model.addAttribute("user_id", id);
+        return "admin/user/user_setRole";
+    }
+    /**
+     * 设置角色
+     */
+    @ResponseBody
+    @RequestMapping("/setRole")
+    public ResponseEntity setRole(String id, @RequestBody ArrayList<Role> roles){
+        userService.setRole(id, roles);
+        return success();
+    }
 
 
 

@@ -24,10 +24,10 @@
 	</form>
 	<div style="height: 10px;" />
 	<div>
-			<button class="layui-btn bt_add" data="893px, 550px" data-url="role/role_add.jsp">新增</button>
-			<button class="layui-btn layui-btn-warm bt_update" data="893px, 550px" data-url="role/updatePage">修改</button>
-			<button class="layui-btn layui-btn-danger bt_delete" data-url="${ctx}/a/role/delete">删除</button>
-			<button class="layui-btn layui-btn-normal bt_setMenu" data="893px, 550px" data-url="role/role_setMenu.jsp">分配权限</button>
+			<button class="layui-btn bt_add" data="893px, 550px" data-url="${ctx}/role/toAddPage">新增</button>
+			<button class="layui-btn layui-btn-warm bt_update" data="893px, 550px" data-url="${ctx}/role/toUpdatePage">修改</button>
+			<button class="layui-btn layui-btn-danger bt_delete" data-url="${ctx}/role/delete">删除</button>
+			<button class="layui-btn layui-btn-normal bt_setMenu" data="893px, 550px" data-url="${ctx}/role/toSetMenuPage">分配权限</button>
 	</div>
 
 	<table class="layui-hide" id="role" lay-data="{id: 'role'}"></table>
@@ -37,7 +37,7 @@
 
 			table.render({
 				elem : '#role',
-				url : '${ctx}/a/role/list',
+				url : '${ctx}/role/list',
 				cellMinWidth : 80,
 				page : true,
 				cols : [ [ {

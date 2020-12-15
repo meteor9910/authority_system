@@ -30,6 +30,93 @@ public class Menu extends BaseEntity {
     @TableField(exist = false)
     private List<Menu> nodes;
 
+    public List<Menu> getNodes() {
+        return nodes;
+    }
+
+    public void setNodes(List<Menu> nodes) {
+        this.nodes = nodes;
+    }
+
+    public String getPid() {
+        return pid;
+    }
+
+    public void setPid(String pid) {
+        this.pid = pid;
+    }
+
+    public String getMenuName() {
+        return menuName;
+    }
+
+    public void setMenuName(String menuName) {
+        this.menuName = menuName;
+    }
+
+    public Integer getMenuType() {
+        return menuType;
+    }
+
+    public void setMenuType(Integer menuType) {
+        this.menuType = menuType;
+    }
+
+    public String getMenuImg() {
+        return menuImg;
+    }
+
+    public void setMenuImg(String menuImg) {
+        this.menuImg = menuImg;
+    }
+
+    public String getPermiss() {
+        return permiss;
+    }
+
+    public void setPermiss(String permiss) {
+        this.permiss = permiss;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getFunctionImg() {
+        return functionImg;
+    }
+
+    public void setFunctionImg(String functionImg) {
+        this.functionImg = functionImg;
+    }
+
+    public String getSeq() {
+        return seq;
+    }
+
+    public void setSeq(String seq) {
+        this.seq = seq;
+    }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "pid='" + pid + '\'' +
+                ", menuName='" + menuName + '\'' +
+                ", menuType=" + menuType +
+                ", menuImg='" + menuImg + '\'' +
+                ", permiss='" + permiss + '\'' +
+                ", url='" + url + '\'' +
+                ", functionImg='" + functionImg + '\'' +
+                ", seq='" + seq + '\'' +
+                ", nodes=" + nodes +
+                '}';
+    }
+
 
 
 }

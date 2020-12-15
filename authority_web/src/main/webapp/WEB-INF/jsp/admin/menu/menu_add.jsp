@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div class="body_main">
-		<form class="layui-form layui-form-pane" action="${ctx}/a/menu/save">
+		<form class="layui-form layui-form-pane" action="${ctx}/menu/save">
 			<div class="layui-form-item">
 				<label class="layui-form-label">父级菜单</label>
 				<div class="layui-input-block">

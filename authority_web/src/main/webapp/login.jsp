@@ -6,8 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>登录</title>
-    <%@ include file="static/base/common.jspf"%>
-
+    <%@ include file="/static/base/common.jspf" %>
     <style>
         .window {
             width: 350px;
@@ -29,13 +28,13 @@
         <div class="layui-form-item" style="text-align: center">
             <h1>欢迎登录</h1>
         </div>
+        <div style="color: red;padding-left: 110px;">${msg}</div>
         <div class="layui-form-item" style="margin-right: 50px; margin-top: 30px;">
             <label class="layui-form-label">用户名：</label>
             <div class="layui-input-block">
                 <input type="text" name="userName" placeholder="请输入用户名" autocomplete="off" class="layui-input">
             </div>
         </div>
-        <div style="color: red;padding-left: 110px;">${msg}</div>
         <div class="layui-form-item" style="margin-top: 25px;">
             <label class="layui-form-label">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
             <div class="layui-input-inline">

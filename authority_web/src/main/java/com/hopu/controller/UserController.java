@@ -7,7 +7,9 @@ import com.hopu.domain.Role;
 import com.hopu.domain.User;
 import com.hopu.service.IUserService;
 import com.hopu.utils.ResponseEntity;
+import com.hopu.utils.ShiroUtils;
 import com.hopu.utils.UUIDUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,6 +36,7 @@ public class UserController {
      * 向用户页面跳转
      */
     @RequestMapping("/tolistPage")
+    @RequiresPermissions("user:list")
     public String userList(){
         return "admin/user/user_list";
     }
@@ -66,6 +69,8 @@ public class UserController {
     }
     // 向用户添加页面跳转
     @RequestMapping("/toAddPage")
+    @RequiresPermissions("user:add")
+
     public String toAddPage() {
         return "admin/user/user_add";
 
@@ -84,6 +89,7 @@ public class UserController {
         }
         user.setId(UUIDUtils.getID());
         user.setSalt(UUIDUtils.getID());
+        ShiroUtils.encPass(user);
         user.setCreateTime(new Date());
 
 
@@ -107,6 +113,8 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/update")
     public ResponseEntity updateUser(User user){
+        ShiroUtils.encPass(user);
+
         user.setUpdateTime(new Date());
         if (user.getStatus() == null){
             user.setStatus("off");

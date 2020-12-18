@@ -36,7 +36,7 @@ public class RoleController {
     private IUserRoleService userRoleService;
 
     // 向角色列表页面跳转
-    @RequestMapping("/toListPage")
+    @RequestMapping("/tolistPage")
     public String roleList(){
         return "admin/role/role_list";
     }

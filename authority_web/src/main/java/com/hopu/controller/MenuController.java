@@ -32,7 +32,7 @@ public class MenuController {
     @Autowired
     private IRoleMenuService roleMenuService;
 
-    @RequestMapping("/toListPage")
+    @RequestMapping("/tolistPage")
     public String listPage(String id, Model model) {
         List<Menu> menus = menuService.list(new QueryWrapper<Menu>().eq("pid", id).orderByAsc("seq"));
         model.addAttribute("menus", menus);
